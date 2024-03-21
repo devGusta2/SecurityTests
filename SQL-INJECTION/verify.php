@@ -4,20 +4,20 @@
     $email=$_POST['email'];
     $senha=$_POST['senha'];
 
-    $select="SELECT * FROM tbUser WHERE emailUser='$email' AND senhaUser='$senha'";
-    $result=$mysqli->prepare($select);
-    $result->execute();
-    $rows=$result->num_rows;
+    // $select="SELECT * FROM tbUser WHERE emailUser='$email' AND senhaUser='$senha'";
+    // $result=$mysqli->query($select);
 
-    while($res=mysqli_fetch_assoc($result)){
-        $sb=$res['sbNomeUser'];
-        $senhaBanco=$res['senhaUser'];
-        if($rows){
-            echo "SobreNOME:";
-            echo $sb;
-            echo "<br>";
-        }
+    // while($res=mysqli_fetch_assoc($result)){
+    //     echo $res['nameUser'];
+    // }
+    $select="SELECT * FROM tbUser WHERE emailUser=? AND senhaUser=?";
+    $stmt=$mysqli->prepare($select);
+    $stmt->bind_param('ss',$email,$senha);
+    $stmt->execute();
+
+    $result=$stmt->get_result();
+    while($res=$result->fetch_assoc()){
+        echo $res['nameUser'];
     }
- 
 
 ?>
