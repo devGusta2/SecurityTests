@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    left: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(240, 240, 240);
+}
+.login-box{
+    display: flex;
+    flex-direction: row;
+   text-align: center;
+    width: 400px;
+    height: 340px;
+    background-color: white;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 1px 1px 10px rgb(177, 177, 177);
+
+}
+.cad-box{
+    background-color: rgb(173, 21, 21);
+    height: 200px;
+    width: 180px;
+    height: 300px;
+    padding: 30px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: 1px 1px 10px rgb(177, 177, 177);
+    color: white;
+    
+}
+.login-box form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+.container{
+    height: 100vh;   
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+
+.inpt{
+    height: 3em;
+    border-radius: 10px;
+    outline: 0;
+    width: 270px;
+}
+
+.button-cad{
+    height: 3em;
+    border: 2px solid white;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 100px;
+}
+
+.button-cad a{
+    color: white;
+    text-decoration: none;
+}
+
+.button{
+    width: 150px;
+    height: 3em;
+    border-radius: 10px;
+    outline: 0;
+    border: none;
+    color: white;
+    background-color: rgb(173, 21, 21);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.button:hover{
+    transition: 0.5s;
+    background-color: rgb(212, 25, 25);
+}
