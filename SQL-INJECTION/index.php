@@ -7,7 +7,7 @@
 </head>
     <body>
         <div class="login-box">
-            <form action="index.php" method="post">
+            <form action="verify.php" method="post">
                 <label>E-mail:</label>
                 <input type="text" name="email">
                 <label>Senha:</label>
