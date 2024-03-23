@@ -59,10 +59,21 @@
                     </div>
                     <div class="login">
                         <div class="button"><p>Inciar Sessão</p></div>
-                        <img src="" alt="">
+                        <img src="img/lupa.png" alt="">
                     </div>
                </div>
             </header>
+            <main>
+                <div class="desc">
+                    <h2>Novo PS5</h2>
+                    <p>Experimente emoções que você nunca viveu antes com o catálogo disponível 
+                        de jogos disponíveis no PS5
+                    </p>
+                    <br>
+                    <h4>Consoles Novos, Semi-Novos e Usados</h4>
+                </div>
+                <img src="img/OIP.jpg" alt="">
+            </main>
         </div>
     </body>
 </html>
