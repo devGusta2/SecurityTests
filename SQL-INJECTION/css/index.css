@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    left: 0;
+}
+header{
+    height: 6em;
+    background-color: black;
+    width: 100%;
+}
+.first{ 
+    height: 35%;
+    background-color: black;
+    color: white;
+    text-align: right;
+}
+.first h2{
+    margin-right: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.second{
+    height: 65%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3em;
+    align-items: center;
+}
+
+.second ul{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    list-style: none;
+    color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.second select:hover{
+    transition: 0.2s;
+    color: rgb(69, 190, 255);
+}
+.second select{
+    border: 0;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.login{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button{
+    background-color: rgb(69, 190, 255);
+    border-radius: 30px;
+    color: white;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    padding: 2px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+}
+.button:hover{
+    transition: 0.5s;
+    background-color: rgb(69, 103, 255);
+    cursor: pointer;
+}
+.button p{
+    margin-top: 0.4em;
+}
