@@ -10,7 +10,11 @@
     <div class="container">
         <div class="menu">
             <img src="../img/user-icon.png" alt="">
- 
+            <i class="fa-solid fa-house fa-2x">
+                <i class="fa-solid fa-user fa-2x">
+                <i class="fa-solid fa-envelope fa-2x">
+                <i class="fa-solid fa-phone fa-2x">
+                <i class="fa-solid fa-gear fa-2x">
             <a href="">Sair</a>
         </div>
     </div>
