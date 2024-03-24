@@ -27,6 +27,25 @@ if(isset($_POST['email']) and isset($_POST['senha'])){
             header('Location: profile.php');
         }
     }
+
+    // $select="SELECT * FROM tbUser WHERE senhaUser=? AND emailUser=? ";
+    // $stmt=$mysqli->prepare($select);
+    //    $stmt->bind_param('ss',$senha,$email);
+    //    $stmt->execute();
+    //    $result=$stmt->get_result();
+    //    $rows=$result->num_rows;
+    //    while($res=$result->fetch_assoc()){
+    //     $name=$res['nameUser'];
+    //     $id=$res['idUser'];
+    //     if($rows){
+    //         if(!isset($_SESSION)){
+    //             session_start();
+    //         }
+    //         $_SESSION['id']=$id;
+    //         $_SESSION['nameUser']=$name;
+    //         header('Location: profile.php');
+    //     }
+    // }
 ?>
 
 <!DOCTYPE html>
