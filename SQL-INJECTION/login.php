@@ -1,3 +1,34 @@
+<?php
+
+ 
+include('conexao.php');
+if(isset($_POST['email']) and isset($_POST['senha'])){
+    $email=$_POST['email'];
+    $senha=$_POST['senha'];
+}else{
+    $email="";
+    $senha="";
+}
+
+
+ $select="SELECT * FROM tbUser WHERE senhaUser='$senha' AND emailUser='$email' ";
+ $result=$mysqli->query($select);
+ $rows=$result->num_rows;
+
+    while($res=mysqli_fetch_assoc($result)){
+        $name=$res['nameUser'];
+        $id=$res['idUser'];
+        if($rows){
+            if(!isset($_SESSION)){
+                session_start();
+            }
+            $_SESSION['id']=$id;
+            $_SESSION['nameUser']=$name;
+            header('Location: profile.php');
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,9 +49,9 @@
         
                     <h3>Iniciar sessão</h3>
                     <label>E-mail</label>
-                    <input type="text" placeholder="E-mail">
+                    <input type="text" placeholder="E-mail" name="email">
                     <label>Senha</label>
-                    <input type="text" placeholder="Senha">
+                    <input type="text" placeholder="Senha" name="senha">
                     <button type="submit"><h4>Seguinte</h3></button>
                     <button type="" style=" background-color:rgb(11, 105, 155);"><h4>Criar uma conta</h4></button>
            </form>
