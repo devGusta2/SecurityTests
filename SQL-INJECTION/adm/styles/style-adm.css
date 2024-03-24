@@ -12,7 +12,7 @@ body{
 }
 .menu{
 height: 100%;
-width: 230px;
+width: 20%;
 background-color: rgb(31, 134, 194);
 position: fixed;
 display: flex;

@@ -9,9 +9,9 @@
 <body>
     <div class="container">
         <div class="menu">
-            <img src="../img/user-icon1.png" alt="">
+            
             <ul>
-                <li><a href="" class="link"><i class="fa-solid fa-house fa-2x"></i><p>Dashboard</p></a></li>
+                <li><a href="dashboard.php" class="link"><i class="fa-solid fa-house fa-2x"></i><p>Dashboard</p></a></li>
                 <li><a href="users.php" class="link"><i class="fa-solid fa-user  fa-2x"></i><p>Users</p></a></li>
                 <li><a href="" class="link"><i class="fa-solid fa-file fa-2x"></i><p>Pages</p></a></li>
                 <li><a href="" class="link"><i class="fa-solid fa-envelope fa-2x"></i><p>E-mails</p></a></li>
