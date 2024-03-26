@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style-user.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/style-dashboard.css">
+    <title>Dashboard</title>
 </head>
 <body>
     <div class="container">
@@ -19,6 +19,31 @@
                     </ul>
                     <a href=""><i class="fa-solid fa-right-from-bracket"></i>Sair</a>
         </div>
+        <div class="card-box">
+            <div class="card">
+                <h2>Usuarios</h2>
+                <div class="row-card">
+                    <i class="fa-solid fa-user fa-6x"></i>
+                    
+                </div>
+                
+            </div>
+            <div class="card">
+                <h2>Usuarios</h2>
+                    <div class="row-card">
+                        <i class="fa-solid fa-user fa-5x"></i>
+                        
+                </div>
+            </div>
+            <div class="card">
+                <h2>Usuarios</h2>
+                    <div class="row-card">
+                        <i class="fa-solid fa-user fa-5x"></i>
+                </div>
+            </div>
+            
+        </div>
+        
     </div>
     <script src="https://kit.fontawesome.com/787aeba2d2.js" crossorigin="anonymous"></script>
 </body>
