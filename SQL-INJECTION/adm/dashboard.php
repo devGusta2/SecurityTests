@@ -1,5 +1,6 @@
 <?php
     include('../conexao.php');
+    include('protect.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +22,7 @@
                         <li><a href="" class="link"><i class="fa-solid fa-phone fa-2x"></i><p>Contact</p></a></li>
                         <li><a href="" class="link"><i class="fa-solid fa-comment-dots fa-2x"></i><p>Comments</p></a></li>
                     </ul>
-                    <a href=""><i class="fa-solid fa-right-from-bracket"></i>Sair</a>
+                    <a href="logOut.php"><i class="fa-solid fa-right-from-bracket"></i>Sair</a>
         </div>
         <?php 
             $sql="SELECT idUser FROM tbUser";
@@ -30,6 +31,7 @@
         ?>
         <div class="content">
         <h1>Dashboard</h1>
+      
         <div class="card-box">
             
             <div class="card">

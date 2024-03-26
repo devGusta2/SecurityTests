@@ -1,13 +1,23 @@
+<?php
+    include('protect.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
-    <link rel="stylesheet" href="styles/style-user.css">
+    <link rel="stylesheet" href="styles/style-user1.css">
     <title>Tabela de Usuários</title>
     <style>
-       
+       .conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 85%;
+}
     </style>
 </head>
 <body>
@@ -21,11 +31,12 @@
                     <li><a href="" class="link"><i class="fa-solid fa-phone fa-2x"></i><p>Contact</p></a></li>
                     <li><a href="" class="link"><i class="fa-solid fa-comment-dots fa-2x"></i><p>Comments</p></a></li>
                 </ul>
-                <a href=""><i class="fa-solid fa-right-from-bracket"></i>Sair</a>
-        </div>
-        <div class="table-box">
-     
-    <table>
+                <a href="logOut.php"><i class="fa-solid fa-right-from-bracket"></i>Sair</a>
+    </div>
+        
+        <div class="conteudo">
+        <input type="text" id="inpt">
+        <table>
         <thead>
             <tr>
                 <th>ID</th>
@@ -67,7 +78,8 @@
             ?>
         </tbody>
     </table>
-    </div>
+        </div>
+    
 </div>
 <script src="https://kit.fontawesome.com/787aeba2d2.js" crossorigin="anonymous"></script>
 </body>
