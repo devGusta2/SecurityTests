@@ -42,7 +42,7 @@ th {
     height: 100%;
     background-color: rgb(31, 134, 194);
     padding: 10px;
-    position: fixed;
+    position: relative;
 }
 .menu-vert{
     display: flex;

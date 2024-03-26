@@ -1,3 +1,6 @@
+<?php
+    include('../conexao.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,26 +22,32 @@
                     </ul>
                     <a href=""><i class="fa-solid fa-right-from-bracket"></i>Sair</a>
         </div>
+        <?php 
+            $sql="SELECT idUser FROM tbUser";
+            $stmt=$mysqli->query($sql);
+            $users=$stmt->num_rows;
+        ?>
         <div class="card-box">
             <div class="card">
                 <h2>Usuarios</h2>
                 <div class="row-card">
                     <i class="fa-solid fa-user fa-6x"></i>
-                    
+                    <?php echo "<p>".$users."</p>";?>
                 </div>
                 
             </div>
             <div class="card">
-                <h2>Usuarios</h2>
+                <h2>Comentários</h2>
                     <div class="row-card">
-                        <i class="fa-solid fa-user fa-5x"></i>
-                        
+                        <i class="fa-solid fa-comment-dots fa-5x"></i>
+                        <p>58</p>
                 </div>
             </div>
             <div class="card">
-                <h2>Usuarios</h2>
+                <h2>E-mails</h2>
                     <div class="row-card">
-                        <i class="fa-solid fa-user fa-5x"></i>
+                        <i class="fa-solid fa-envelope fa-5x"></i>
+                        <p>26</p>
                 </div>
             </div>
             
