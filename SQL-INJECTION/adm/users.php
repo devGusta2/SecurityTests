@@ -24,6 +24,7 @@
                 <a href=""><i class="fa-solid fa-right-from-bracket"></i>Sair</a>
         </div>
         <div class="table-box">
+     
     <table>
         <thead>
             <tr>
