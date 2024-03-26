@@ -11,6 +11,7 @@
 </head>
 <body>
     <div class="container">
+       
         <div class="menu-vert">
                     <ul>
                         <li><a href="dashboard.php" class="link"><i class="fa-solid fa-house fa-2x"></i><p>Dashboard</p></a></li>
@@ -27,7 +28,10 @@
             $stmt=$mysqli->query($sql);
             $users=$stmt->num_rows;
         ?>
+        <div class="content">
+        <h1>Dashboard</h1>
         <div class="card-box">
+            
             <div class="card">
                 <h2>Usuarios</h2>
                 <div class="row-card">
@@ -51,6 +55,7 @@
                 </div>
             </div>
             
+        </div>
         </div>
         
     </div>
