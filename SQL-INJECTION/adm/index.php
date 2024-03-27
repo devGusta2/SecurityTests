@@ -1,66 +1,4 @@
-<?php
 
- 
-include('../conexao.php');
-if(isset($_POST['email']) and isset($_POST['senha'])){
-    $email=$_POST['email'];
-    $senha=$_POST['senha'];
-}else{
-    $email="";
-    $senha="";
-}
-
-
- $select="SELECT * FROM tbadm WHERE senhaAdm='$senha' AND emailAdm='$email' ";
- $result=$mysqli->query($select);
- $rows=$result->num_rows;
- 
-    if($rows>0){
-        while($res=mysqli_fetch_assoc($result)){
-            $name=$res['nomeAdm'];
-            $id=$res['idAdm'];
-            if($rows){
-                if(!isset($_SESSION)){
-                    session_start();
-                }
-                $_SESSION['idAdm']=$id;
-                $_SESSION['nomeAdm']=$name;
-                header('Location: dashboard.php');
-            }
-        }
-    }else{
-        echo "E-mail ou senha estão incorretos";
-
-
-    }
-   
-    // $select="SELECT * FROM tbUser WHERE senhaUser=? AND emailUser=? ";
-    // $stmt=$mysqli->prepare($select);
-    //    $stmt->bind_param('ss',$senha,$email);
-    //    $stmt->execute();
-    //    $result=$stmt->get_result();
-    //    $rows=$result->num_rows;
-    //    while($res=$result->fetch_assoc()){
-    //     $name=$res['nameUser'];
-    //     $id=$res['idUser'];
-    //     if($rows){
-    //         if(!isset($_SESSION)){
-    //             session_start();
-    //         }
-    //         $_SESSION['id']=$id;
-    //         $_SESSION['nameUser']=$name;
-    //         header('Location: profile.php');
-    //     }
-    // }
-    //         if(!isset($_SESSION)){
-    //             session_start();
-    //         }
-    //         $_SESSION['id']=$id;
-    //         $_SESSION['nameUser']=$name;
-    //         header('Location: profile.php');
-    //     }
-    // }
-?>
 
 
 <!DOCTYPE html>
@@ -73,15 +11,83 @@ if(isset($_POST['email']) and isset($_POST['senha'])){
 </head>
     <body>
         <div class="container">
+            <div class="details">
+            <i class="fa-solid fa-user-tie fa-10x"></i>
+            <h3>Login Admin</h3>
+            </div>
             <form action="" method="post" class="login-box">
-                    <h3>Login Admin</h3>
+                 
                     <label>E-mail</label>
                     <input type="text" placeholder="E-mail" name="email">
                     <label>Senha</label>
                     <input type="text" placeholder="Senha" name="senha">
+                    <?php
+
+                        
+                        include('../conexao.php');
+                        if(isset($_POST['email']) and isset($_POST['senha'])){
+                            $email=$_POST['email'];
+                            $senha=$_POST['senha'];
+                        }else{
+                            $email="";
+                            $senha="";
+                        }
+
+
+                        $select="SELECT * FROM tbadm WHERE senhaAdm='$senha' AND emailAdm='$email' ";
+                        $result=$mysqli->query($select);
+                        $rows=$result->num_rows;
+                        
+                            if($rows>0){
+                                while($res=mysqli_fetch_assoc($result)){
+                                    $name=$res['nomeAdm'];
+                                    $id=$res['idAdm'];
+                                    if($rows){
+                                        if(!isset($_SESSION)){
+                                            session_start();
+                                        }
+                                        $_SESSION['idAdm']=$id;
+                                        $_SESSION['nomeAdm']=$name;
+                                        header('Location: dashboard.php');
+                                    }
+                                }
+                            }else{
+                                echo "E-mail ou senha estão incorretos";
+
+
+                            }
+                        
+                            // $select="SELECT * FROM tbUser WHERE senhaUser=? AND emailUser=? ";
+                            // $stmt=$mysqli->prepare($select);
+                            //    $stmt->bind_param('ss',$senha,$email);
+                            //    $stmt->execute();
+                            //    $result=$stmt->get_result();
+                            //    $rows=$result->num_rows;
+                            //    while($res=$result->fetch_assoc()){
+                            //     $name=$res['nameUser'];
+                            //     $id=$res['idUser'];
+                            //     if($rows){
+                            //         if(!isset($_SESSION)){
+                            //             session_start();
+                            //         }
+                            //         $_SESSION['id']=$id;
+                            //         $_SESSION['nameUser']=$name;
+                            //         header('Location: profile.php');
+                            //     }
+                            // }
+                            //         if(!isset($_SESSION)){
+                            //             session_start();
+                            //         }
+                            //         $_SESSION['id']=$id;
+                            //         $_SESSION['nameUser']=$name;
+                            //         header('Location: profile.php');
+                            //     }
+                            // }
+                        ?>
                     <button type="submit"><h4>Seguinte</h3></button>
-                  
+
            </form>
         </div>
+        <script src="https://kit.fontawesome.com/787aeba2d2.js" crossorigin="anonymous"></script>
     </body>
 </html>
