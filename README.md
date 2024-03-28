@@ -1,4 +1,4 @@
 # SecurityTests
-# Project about hacktivism presetation
+# Project about hacktivism presentation
 # made by Gustavo Rodrigues
 # Fatec Ferraz de Vasconcelos
